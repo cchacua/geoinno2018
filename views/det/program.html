@@ -7,8 +7,17 @@
             <strong>Version: {{todaydate | date : 'dd/MM/yyyy HH:mm'}}</strong>
         </div>
         <div class="col-xs-12">
-	<h1 ng-repeat="parallelt in parallel" ng-if="showparallel">Parallel session {{parallelt.psid}}</h1>	
-           
+	<h1 ng-repeat="parallelt in parallel" ng-if="showparallel">Parallel session {{parallelt.psid}}.</h1>	
+		<p>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</p>
+		<table class="table table-bordered" id="table" ng-repeat="sessionst in sessions | filter: parallelt.psid" ng-if="showsessions"> 
+			<thead>
+			    <tr>
+				<th width="100&">{{sessionst.sid}} {{sessionst.stitle}}</th>
+			    </tr>
+			</thead>
+			<tbody>
+			</tbody>	
+		</table>
         </div>
     </div>
 </div>
