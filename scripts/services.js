@@ -2,7 +2,7 @@
 
 angular.module('geoinno2018')
         //https://script.google.com/macros/s/AKfycby6sdMtJH_-3WfJIhRV3gEGF-oFwJrwxsM6I68nhVliPAHvf1QS/exec?id=11Thfr5v8TKHSkDjGUIwZetdFYKnh4_speNeFKvcAP9g&sheet=SHEETNAME
-        .constant("baseURL","https://script.google.com/macros/s/AKfycby6sdMtJH_-3WfJIhRV3gEGF-oFwJrwxsM6I68nhVliPAHvf1QS/exec?id=11Thfr5v8TKHSkDjGUIwZetdFYKnh4_speNeFKvcAP9")
+        .constant("baseURL","https://script.google.com/macros/s/AKfycby6sdMtJH_-3WfJIhRV3gEGF-oFwJrwxsM6I68nhVliPAHvf1QS/exec?id=11Thfr5v8TKHSkDjGUIwZetdFYKnh4_speNeFKvcAP9g")
 
 
         .service('db', ['$resource', 'baseURL', function($resource,baseURL) {
