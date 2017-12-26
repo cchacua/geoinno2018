@@ -9,9 +9,9 @@
         <div class="col-xs-12" ng-repeat="parallelt in parallel" ng-if="showparallel">
 	<h1>Parallel session {{parallelt.psid}}.</h1>	
 		<p>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</p>
-		<table class="table table-sm table-striped table-bordered" id="table" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions"> 
-			<thead class="thead-inverse">
-			    <tr>
+		<table class="table table-sm table-bordered table-striped table-dark" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions"> 
+			<thead>
+			    <tr style="background-color: black; color: white">
 				<th colspan="2" width="100%">{{sessionst.sid}} {{sessionst.stitle}}</th>
 			    </tr>
 			    <tr>
