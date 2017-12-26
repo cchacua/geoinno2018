@@ -8,17 +8,17 @@
         </div>
         <div class="col-xs-12" ng-repeat="parallelt in parallel" ng-if="showparallel">
 	<h1>Parallel session {{parallelt.psid}}.</h1>	
-		<p>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</p>
-		<table class="table table-sm table-bordered table-striped table-dark" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions"> 
+		<p><em>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</em></p>
+		<table width="100%" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions"> 
 			<thead>
 			    <tr style="background-color: black; color: white">
 				<th colspan="2" width="100%">{{sessionst.sid}} {{sessionst.stitle}}</th>
 			    </tr>
-			    <tr>
+			    <tr style="background-color: white;">
 				<th colspan="2" width="100%">Room: {{sessionst.sroom}}</th>
 				   
 			    </tr>
-			    <tr>	
+			    <tr style="background-color: white;">	
 				<th  colspan="2" width="100%">Chair: {{sessionst.schair}}</th>
 			    </tr> 	    
 			</thead>
