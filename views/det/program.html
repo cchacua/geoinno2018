@@ -9,23 +9,38 @@
         <div class="col-xs-12" ng-repeat="parallelt in parallel" ng-if="showparallel">
 	<h1>Parallel session {{parallelt.psid}}.</h1>	
 		<p><em>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</em></p>
-		<table width="100%" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions"> 
+		<table width="100%" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions" style="border-collapse: collapse; border-spacing: 0; width: 100%;"> 
 			<thead>
-			    <tr style="background-color: black; color: white">
-				<th colspan="2" width="100%">{{sessionst.sid}} {{sessionst.stitle}}</th>
+			    <tr style="background-color: black; color: white;">
+				<th colspan="2" width="100%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">{{sessionst.sid}} {{sessionst.stitle}}</th>
 			    </tr>
 			    <tr style="background-color: white;">
-				<th colspan="2" width="100%">Room: {{sessionst.sroom}}</th>
+				<th colspan="2" width="100%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">Room: {{sessionst.sroom}}</th>
 				   
 			    </tr>
 			    <tr style="background-color: white;">	
-				<th  colspan="2" width="100%">Chair: {{sessionst.schair}}</th>
+				<th  colspan="2" width="100%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">Chair: {{sessionst.schair}}</th>
 			    </tr> 	    
 			</thead>
 			<tbody>
-				<tr ng-repeat="paperst in papers | filter: {'sid':sessionst.sid}" ng-if="showpapers">
-				<td width="70%">{{paperst.ptitle}}</td>
-			 	<td width="30%">{{paperst.pauthors}}</td>
+				<tr ng-repeat="paperst in papers | filter: {'sid':sessionst.sid}" ng-if="showpapers" >
+				<td width="70%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">{{paperst.ptitle}}</td>
+			 	<td width="30%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">{{paperst.pauthors}}</td>
 				</tr>
 			</tbody>	
 		</table>
