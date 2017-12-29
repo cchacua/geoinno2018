@@ -13,35 +13,35 @@
 			<thead>
 			    <tr style="background-color: black; color: white;">
 				<th colspan="2" width="100%" style="text-align: left;
-                padding: 7px;
+                padding: 5px;
                 vertical-align:top;">Session {{sessionst.sid}} {{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}} </th>
 			    </tr>
                 <tr style="background-color: #D9D9D9;">
 				<th colspan="2" width="100%" style="text-align: left;
-                padding: 7px;
+                padding: 5px;
                 vertical-align:top;">{{sessionst.stitle}}</th>
 				   
 			    </tr>
 			    <tr style="background-color: white;">
 				<th colspan="2" width="100%" style="text-align: left;
-                padding: 7px;
+                padding: 5px;
                 vertical-align:top;">Room: {{sessionst.sroom}}</th>
 				   
 			    </tr>
 			    <tr style="background-color: #D9D9D9;">	
 				<th  colspan="2" width="100%" style="text-align: left;
-                padding: 7px;
+                padding: 5px;
                 vertical-align:top;">Chair: {{sessionst.schair}}</th>
 			    </tr> 	    
 			</thead>
 			<tbody>
 				<tr ng-repeat="paperst in papers | filter: {'sid':sessionst.sid}" ng-if="showpapers" ng-style="$index % 2 == 0 ? {'background-color':'white'} : {'background-color':'#D9D9D9'}">
-				<td width="70%" style="text-align: left;
-                padding: 7px;
-                vertical-align:top;">{{paperst.ptitle}}</td>
-			 	<td width="30%" style="text-align: left;
-                padding: 7px;
-                vertical-align:top;">{{paperst.pauthors_xml}}</td>
+				<td width="62%" style="text-align: left;
+                padding: 5px;
+                vertical-align:top;"><p>{{paperst.ptitle}}</p></td>
+			 	<td width="38%" style="text-align: left;
+                padding: 5px;
+                vertical-align:top;"><p>{{paperst.pauthors_xml}}</p></td>
 				</tr>
 			</tbody>
 		</table>
