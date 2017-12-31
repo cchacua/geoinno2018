@@ -9,7 +9,8 @@
         <div class="col-xs-12" ng-repeat="parallelt in parallel" ng-if="showparallel">       
 	<h1 style="font-family: arial; color: black;">Parallel sessions {{parallelt.psid}}.</h1>	
 		<p style="font-family: arial;"><em></em></p>
-		<table width="100%" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions" style="border-collapse: collapse; border-spacing: 0; width: 100%; font-family: arial; color: black; page-break-inside: avoid;"> 
+        <div width="100%" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions">
+            <table width="100%" style="border-collapse: collapse; border-spacing: 0; width: 100%; font-family: arial; color: black; line-height:105%;  page-break-inside: avoid;"> 
 			<thead>
 			    <tr style="background-color: black; color: white;">
 				<th colspan="2" width="100%" style="text-align: left;
@@ -45,7 +46,8 @@
 				</tr>
 			</tbody>
 		</table>
-            <br style="page-break-after: auto">
+            <br>
+        </div> 
             <br style="page-break-before: always">
         </div>    
     </div>
