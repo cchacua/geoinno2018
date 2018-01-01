@@ -24,5 +24,7 @@
 //C</w:t></w:r><w:r w:rsidRPr="00807F5D"><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/><w:noProof/><w:color w:val="000000"/><w:sz w:val="21"/><w:szCs w:val="21"/><w:lang w:val="en-GB"/></w:rPr><w:lastRenderedPageBreak/><w:t>//
 ```
 (or a similar block, begining with `//C`) by `, ` 
+
 13. Zip de document again, preserving the same structure (verify that the main folder is the root folder)
+
 14. Change extension of the zip file, `.zip`, to `.docx`    
