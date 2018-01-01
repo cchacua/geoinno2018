@@ -58,7 +58,28 @@ angular
                     }
                 }
     })
-   
+    
+    // Program 2
+    .state('app.views.program_2', {
+                url:'/program_2',
+                views: {
+                    'content@': {
+                        templateUrl : 'views/det/program_2.html',
+                        controller  : 'viewscont'                  
+                    }
+                }
+    })
+
+    // Program 3 (Ernest's original proposal)
+    .state('app.views.program_3', {
+                url:'/program_3',
+                views: {
+                    'content@': {
+                        templateUrl : 'views/det/program_3.html',
+                        controller  : 'viewscont'                  
+                    }
+                }
+    })    
 /*****************************End views***************************/
 
     // Route for the about us

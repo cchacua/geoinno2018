@@ -7,29 +7,45 @@
             <strong>Version: {{todaydate | date : 'dd/MM/yyyy HH:mm'}}</strong>
         </div>
         <div class="col-xs-12" ng-repeat="parallelt in parallel" ng-if="showparallel">
-	<h1>Parallel session {{parallelt.psid}}.</h1>	
-		<p>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</p>
-		<table class="table table-sm table-striped table-bordered" id="table" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions"> 
-			<thead class="thead-inverse">
-			    <tr>
-				<th colspan="2" width="100%">{{sessionst.sid}} {{sessionst.stitle}}</th>
+	<h1 style="font-family: arial;">Parallel sessions {{parallelt.psid}}.</h1>	
+		<p style="font-family: arial;"><em>{{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}}</em></p>
+		<table width="100%" ng-repeat="sessionst in sessions | filter: {'psid':parallelt.psid}" ng-if="showsessions" style="border-collapse: collapse; border-spacing: 0; width: 100%; font-family: arial;"> 
+			<thead>
+			    <tr style="background-color: black; color: white;">
+				<th colspan="2" width="100%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">{{sessionst.sid}} {{sessionst.stitle}}</th>
 			    </tr>
-			    <tr>
-				<th colspan="2" width="100%">Room: {{sessionst.sroom}}</th>
+			    <tr style="background-color: white;">
+				<th colspan="2" width="100%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">Room: {{sessionst.sroom}}</th>
 				   
 			    </tr>
-			    <tr>	
-				<th  colspan="2" width="100%">Chair: {{sessionst.schair}}</th>
+			    <tr style="background-color: white;">	
+				<th  colspan="2" width="100%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">Chair: {{sessionst.schair}}</th>
 			    </tr> 	    
 			</thead>
 			<tbody>
-				<tr ng-repeat="paperst in papers | filter: {'sid':sessionst.sid}" ng-if="showpapers">
-				<td width="70%">{{paperst.ptitle}}</td>
-			 	<td width="30%">{{paperst.pauthors}}</td>
+				<tr ng-repeat="paperst in papers | filter: {'sid':sessionst.sid}" ng-if="showpapers" ng-style="$index % 2 == 0 ? {'background-color':'#D9D9D9'} : {'background-color':'white'}">
+				<td width="70%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">{{paperst.ptitle}}</td>
+			 	<td width="30%" style="text-align: left;
+                padding: 5px;
+                border: 1px solid #ddd;
+                vertical-align:top;">{{paperst.pauthors}}</td>
 				</tr>
 			</tbody>	
 		</table>
-        </div>
+            <br style="page-break-before: always">
+        </div>    
     </div>
 </div>
 
