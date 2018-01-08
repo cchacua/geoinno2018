@@ -65,7 +65,8 @@ angular.module('geoinno2018')
     });
 **/    
 
-      
+    $scope.author= "";
+    $scope.title= "";
     $scope.todaydate = new Date().toISOString();
 
     $scope.exportToExcel=function(tableId){

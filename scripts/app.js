@@ -79,7 +79,18 @@ angular
                         controller  : 'viewscont'                  
                     }
                 }
-    })    
+    })
+    
+    // Program 4, search
+    .state('app.views.program_4', {
+                url:'/program_4',
+                views: {
+                    'content@': {
+                        templateUrl : 'views/det/program_4.html',
+                        controller  : 'viewscont'                  
+                    }
+                }
+    }) 
 /*****************************End views***************************/
 
     // Route for the about us
