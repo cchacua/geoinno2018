@@ -33,7 +33,7 @@
                         </td>
                         <td width="50%">
                             <p ng-repeat="sessionst in sessions | filter: {'sid':paperst.sid}" ng-if="showsessions" >
-                             <strong>Session {{sessionst.sid}} {{sessionst.stitle}}</strong><br>
+                             <strong>Session {{sessionst.sid}} {{sessionst.stitle}} (Room {{sessionst.sroom}})</strong><br>
                              <small ng-repeat="parallelt in parallel | filter: {'psid':sessionst.psid}" ng-if="showparallel">
                                 {{parallelt.date_long}}, {{parallelt.hour_begin}} - {{parallelt.hour_end}} </small>    
                             </p>
