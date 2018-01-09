@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row row-content">
         <div class="col-xs-12 text-right">
-            <button class="btn btn-link" ng-click="exportToExcel('*')">
+            <button class="btn btn-link" ng-click="exportToExcel('#table_results')">
                 <span class="glyphicon glyphicon-share"></span> Export to Excel
             </button>
             <strong>Version: {{todaydate | date : 'dd/MM/yyyy HH:mm'}}</strong>
@@ -24,20 +24,14 @@
 <!--
 -->  
     <div class="row row-content">
-        <div class="col-xs-12 text-right">
-                <table width="100%" style="border-collapse: collapse; border-spacing: 0; width: 100%; font-family: arial; color: black; line-height:105%;  page-break-inside: avoid;">
+        <div class="col-xs-12">
+                <table width="100%" class="table table-hover table-striped" id="table_results">
                     <tbody>
                     <tr ng-repeat="paperst in papers | filter: {'pauthors': author} | filter: {'ptitle': title}" ng-if="showpapers">
-                        <td width="60%" style="text-align: left;
-                        padding: 7px;
-                        border: 1px solid #ddd;
-                        vertical-align:top;">
+                        <td width="50%">
                             <p><strong>{{paperst.ptitle}}</strong><br>{{paperst.pauthors}}</p>
                         </td>
-                        <td width="40%" style="text-align: left;
-                        padding: 7px;
-                        border: 1px solid #ddd;                       
-                        vertical-align:top;">
+                        <td width="50%">
                             <p ng-repeat="sessionst in sessions | filter: {'sid':paperst.sid}" ng-if="showsessions" >
                              <strong>Session {{sessionst.sid}} {{sessionst.stitle}}</strong><br>
                              <small ng-repeat="parallelt in parallel | filter: {'psid':sessionst.psid}" ng-if="showparallel">
